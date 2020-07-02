@@ -1,4 +1,4 @@
-# A Helper for retrieving OS environment variables.
+# OS environment variables helper.
 [![Build Status](https://img.shields.io/travis/clevergo/osenv?style=for-the-badge)](https://travis-ci.org/clevergo/osenv)
 [![Coverage Status](https://img.shields.io/coveralls/github/clevergo/osenv?style=for-the-badge)](https://coveralls.io/github/clevergo/osenv)
 [![Go.Dev reference](https://img.shields.io/badge/go.dev-reference-blue?logo=go&logoColor=white&style=for-the-badge)](https://pkg.go.dev/clevergo.tech/osenv?tab=doc)
