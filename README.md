@@ -13,7 +13,7 @@ $ go get -u clevergo.tech/osenv
 
 ### Get
 
-`Get` allow specifying fallback/default value if the environment variable associated with the given key doesn't exist.
+`Get` returns the environment variable associated with the given key, a fallback(default) value will be returned if not exist.
 
 Assume environment is that `FOO=BAR EMPTY=`.
 
