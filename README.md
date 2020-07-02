@@ -16,8 +16,8 @@ $ go get -u clevergo.tech/osenv
 Assume environment is that `FOO=BAR EMPTY=`.
 
 | Method | Value
-|---|---|
-| `osenv.Get("FOO")` | bar |
+|---|:---:|
+| `osenv.Get("FOO")` | BAR |
 | `osenv.Get("EMPTY")` | - |
 | `osenv.Get("EMPTY", "BUZZ")` | - |
 | `osenv.Get("FIZZ")` | - |
