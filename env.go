@@ -18,3 +18,12 @@ func Get(key string, fallback ...string) string {
 
 	return fallback[0]
 }
+
+// SetNX sets the value of the environment variable named by the key if not exist.
+func SetNX(key, value string) error {
+	if _, exists := os.LookupEnv(key); !exists {
+		return os.Setenv(key, value)
+	}
+
+	return nil
+}

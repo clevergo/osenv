@@ -11,7 +11,7 @@
 $ go get -u clevergo.tech/osenv
 ```
 
-### Retrieve
+### Get
 
 `Get` allow specifying fallback/default value if the environment variable associated with the given key doesn't exist.
 
@@ -24,3 +24,12 @@ Assume environment is that `FOO=BAR EMPTY=`.
 | `osenv.Get("EMPTY", "BUZZ")` | - |
 | `osenv.Get("FIZZ")` | - |
 | `osenv.Get("FIZZ", "BUZZ")` | BUZZ |
+
+
+### SetNX
+
+Sets an environment variable if not exist.
+
+```go
+osenv.SetNX("NONEXISTENT", "VALUE")
+```

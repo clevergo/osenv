@@ -27,3 +27,15 @@ func TestGet(t *testing.T) {
 	os.Setenv("EMPTY", "")
 	assert.Equal(t, "", Get("EMPTY", "NOT EMPTY"))
 }
+
+func TestSetNX(t *testing.T) {
+	key := "SEXNX"
+	value := "SETNX VALUE"
+	assert.Equal(t, "", os.Getenv(key))
+
+	assert.Nil(t, SetNX(key, value))
+	assert.Equal(t, value, os.Getenv(key))
+
+	assert.Nil(t, SetNX(key, "new value"))
+	assert.Equal(t, value, os.Getenv(key))
+}
