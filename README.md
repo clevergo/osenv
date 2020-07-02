@@ -13,7 +13,7 @@ $ go get -u clevergo.tech/osenv
 
 ### Get
 
-`Get` returns the environment variable associated with the given key, a fallback(default) value will be returned if not exist.
+Gets the environment variable associated with the given key, a fallback(default) value will be returned if not exist.
 
 Assume environment is that `FOO=BAR EMPTY=`.
 
@@ -25,6 +25,14 @@ Assume environment is that `FOO=BAR EMPTY=`.
 | `osenv.Get("FIZZ")` | - |
 | `osenv.Get("FIZZ", "BUZZ")` | BUZZ |
 
+### MustGet
+
+Gets the environment variable associated with the given key, and panics if not exist.
+
+```go
+osenv.MustGet("FOO") // BAR
+osenv.MustGet("NIL") // panics
+```
 
 ### SetNX
 

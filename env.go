@@ -4,7 +4,10 @@
 
 package osenv
 
-import "os"
+import (
+	"fmt"
+	"os"
+)
 
 // Get returns the environment variable associated with the given key.
 // Returns the fallback value if not exist.
@@ -17,6 +20,15 @@ func Get(key string, fallback ...string) string {
 	}
 
 	return fallback[0]
+}
+
+// MustGet returns the environment variable associated with the given key,
+// and panics if the key is not exist.
+func MustGet(key string) string {
+	if v, exists := os.LookupEnv(key); exists {
+		return v
+	}
+	panic(fmt.Errorf("getting an unknown environment variable %q", key))
 }
 
 // SetNX sets the value of the environment variable named by the key if not exist.

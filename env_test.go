@@ -28,6 +28,17 @@ func TestGet(t *testing.T) {
 	assert.Equal(t, "", Get("EMPTY", "NOT EMPTY"))
 }
 
+func TestMustGet(t *testing.T) {
+	key := "MUSTSET"
+	value := "MUSET VALUE"
+	os.Setenv(key, value)
+	assert.Equal(t, value, MustGet(key))
+
+	assert.Panics(t, func() {
+		MustGet("NIL")
+	})
+}
+
 func TestSetNX(t *testing.T) {
 	key := "SEXNX"
 	value := "SETNX VALUE"
