@@ -7,6 +7,7 @@ package osenv
 import (
 	"fmt"
 	"os"
+	"strconv"
 )
 
 // Get returns the environment variable associated with the given key.
@@ -38,4 +39,35 @@ func SetNX(key, value string) error {
 	}
 
 	return nil
+}
+
+// GetInt converts the environment variable associated with the given key to int
+// and returns it.
+// Returns the fallback value if the key is not exists or the value is invalid.
+func GetInt(key string, fallback ...int) (int, error) {
+	if s, exists := os.LookupEnv(key); exists {
+		return strconv.Atoi(s)
+	}
+
+	if len(fallback) > 0 {
+		return fallback[0], nil
+	}
+
+	return 0, noEnvError(key)
+}
+
+// MustGetInt converts the environment variable associated with the given key to int
+// and returns it.
+// Panics if the key is not exists or the value is invalid.
+func MustGetInt(key string) int {
+	v, err := GetInt(key)
+	if err != nil {
+		panic(err)
+	}
+
+	return v
+}
+
+func noEnvError(key string) error {
+	return fmt.Errorf("no such environment variable: %s", key)
 }

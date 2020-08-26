@@ -50,3 +50,27 @@ func TestSetNX(t *testing.T) {
 	assert.Nil(t, SetNX(key, "new value"))
 	assert.Equal(t, value, os.Getenv(key))
 }
+
+func TestGetInt(t *testing.T) {
+	key := "GET_INT"
+	_, err := GetInt(key)
+	assert.NotNil(t, err)
+
+	fallback := 1
+	v, _ := GetInt(key, fallback)
+	assert.Equal(t, fallback, v)
+
+	os.Setenv(key, "2")
+	v, _ = GetInt(key)
+	assert.Equal(t, 2, v)
+}
+
+func TestMustGetInt(t *testing.T) {
+	key := "MUST_GET_INT"
+	assert.Panics(t, func() {
+		MustGetInt(key)
+	})
+
+	os.Setenv(key, "3")
+	assert.Equal(t, 3, MustGetInt(key))
+}
