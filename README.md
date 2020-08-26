@@ -25,6 +25,10 @@ Assume environment is that `FOO=BAR EMPTY=`.
 | `osenv.Get("FIZZ")` | - |
 | `osenv.Get("FIZZ", "BUZZ")` | BUZZ |
 
+Similar functions:
+
+- `GetInt`
+
 ### MustGet
 
 Gets the environment variable associated with the given key, and panics if not exist.
@@ -33,6 +37,10 @@ Gets the environment variable associated with the given key, and panics if not e
 osenv.MustGet("FOO") // BAR
 osenv.MustGet("NIL") // panics
 ```
+
+Similar functions:
+
+- `MustGetInt`
 
 ### SetNX
 
