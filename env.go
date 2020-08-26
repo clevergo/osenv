@@ -11,7 +11,7 @@ import (
 )
 
 // Get returns the environment variable associated with the given key.
-// Returns the fallback value if not exist.
+// Returns the fallback value if not exists.
 func Get(key string, fallback ...string) string {
 	if len(fallback) == 0 {
 		return os.Getenv(key)
@@ -24,7 +24,7 @@ func Get(key string, fallback ...string) string {
 }
 
 // MustGet returns the environment variable associated with the given key,
-// and panics if the key is not exist.
+// and panics if the key is not exists.
 func MustGet(key string) string {
 	if v, exists := os.LookupEnv(key); exists {
 		return v

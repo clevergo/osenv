@@ -12,7 +12,7 @@ import (
 )
 
 func TestGet(t *testing.T) {
-	key := "FOO"
+	key := "GET"
 	assert.Equal(t, "", Get(key))
 
 	for _, fallback := range []string{"", "FIZZ", "BUZZ"} {
@@ -29,8 +29,8 @@ func TestGet(t *testing.T) {
 }
 
 func TestMustGet(t *testing.T) {
-	key := "MUSTSET"
-	value := "MUSET VALUE"
+	key := "MUST_GET"
+	value := "MUST_GET VALUE"
 	os.Setenv(key, value)
 	assert.Equal(t, value, MustGet(key))
 
@@ -40,8 +40,8 @@ func TestMustGet(t *testing.T) {
 }
 
 func TestSetNX(t *testing.T) {
-	key := "SEXNX"
-	value := "SETNX VALUE"
+	key := "SEX_NX"
+	value := "SET_NX VALUE"
 	assert.Equal(t, "", os.Getenv(key))
 
 	assert.Nil(t, SetNX(key, value))
