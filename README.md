@@ -1,10 +1,12 @@
 # Extensional OS environment variables helper for Go.
-[![Build Status](https://img.shields.io/travis/clevergo/osenv?style=for-the-badge)](https://travis-ci.org/clevergo/osenv)
-[![Coverage Status](https://img.shields.io/coveralls/github/clevergo/osenv?style=for-the-badge)](https://coveralls.io/github/clevergo/osenv)
-[![Go.Dev reference](https://img.shields.io/badge/go.dev-reference-blue?logo=go&logoColor=white&style=for-the-badge)](https://pkg.go.dev/clevergo.tech/osenv?tab=doc)
-[![Go Report Card](https://goreportcard.com/badge/github.com/clevergo/osenv?style=for-the-badge)](https://goreportcard.com/report/github.com/clevergo/osenv)
-[![Release](https://img.shields.io/github/release/clevergo/osenv.svg?style=for-the-badge)](https://github.com/clevergo/osenv/releases)
-[![Downloads](https://img.shields.io/endpoint?url=https://pkg.clevergo.tech/api/badges/downloads/month/clevergo.tech/osenv&style=for-the-badge)](https://pkg.clevergo.tech/)
+[![Build Status](https://img.shields.io/travis/clevergo/osenv?style=flat)](https://travis-ci.org/clevergo/osenv)
+[![Coverage Status](https://img.shields.io/coveralls/github/clevergo/osenv?style=flat)](https://coveralls.io/github/clevergo/osenv)
+[![Go.Dev reference](https://img.shields.io/badge/go.dev-reference-blue?logo=go&logoColor=white&style=flat)](https://pkg.go.dev/clevergo.tech/osenv?tab=doc)
+[![Go Report Card](https://goreportcard.com/badge/github.com/clevergo/osenv?style=flat)](https://goreportcard.com/report/github.com/clevergo/osenv)
+[![Release](https://img.shields.io/github/release/clevergo/osenv.svg?style=flat)](https://github.com/clevergo/osenv/releases)
+[![Downloads](https://img.shields.io/endpoint?url=https://pkg.clevergo.tech/api/badges/downloads/total/clevergo.tech/osenv&style=flat)](https://pkg.clevergo.tech/clevergo.tech/osenv)
+[![Chat](https://img.shields.io/badge/chat-telegram-blue?style=flat)](https://t.me/clevergotech)
+[![Community](https://img.shields.io/badge/community-forum-blue?style=flat)](https://forum.clevergo.tech)
 
 ## Usage
 
